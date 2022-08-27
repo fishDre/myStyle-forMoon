@@ -1,0 +1,15 @@
+ /**
+     * @description: 递归遍历查找数组对象的某个值
+     * @param {string} code
+     * @param {array} arr
+     * @returns {object}
+     */
+    filterTableMater(code, arr) {
+      for (const item of arr) {
+        if (item.code === code) return item
+        if (item.children && item.children.length) {
+          const _item = this.filterTableMater(code, item.children)
+          if (_item) return _item
+        }
+      }
+    }

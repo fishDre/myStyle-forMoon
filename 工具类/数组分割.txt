@@ -1,0 +1,13 @@
+ cutArray(array, subLength, target) {
+      let index = 0;
+      const newArr = [];
+      while(index < array.length) {
+        newArr.push(array.slice(index, index += subLength));
+      }
+      newArr.forEach((item) => {
+        target.push({
+          'list': item
+        });
+      });
+      return newArr;
+    },

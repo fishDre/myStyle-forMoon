@@ -1,0 +1,14 @@
+handleArrayClassification(data, label) {
+      const labelsMap = {}; // map存储
+      data.forEach((item) => {
+        if (!labelsMap[item[label]]) {
+          // 没有就创建
+          labelsMap[item[label]] = {
+            children: [],
+          };
+        }
+        labelsMap[item[label]].children.push(item);
+      });
+      console.log(labelsMap);
+      return labelsMap;
+    },

@@ -1,0 +1,32 @@
+tooltip: {
+          trigger: 'axis',
+          backgroundColor:'rgba(255,255,255)',
+          textStyle:{
+              color: "#262626"
+          },
+          extraCssText:'box-shadow:0px 2px 8px 0px rgba(102, 61, 0, 0.16)' ,
+          formatter: (params)=>{
+             console.log('1111',params);
+              let list = [];
+              let str1 = `<div style='padding:5px'>
+                          <span style="width:170px;display:inline-block; text-align: left;">工单子类型</span>
+                          <span style="width:80px;display:inline-block; text-align: center;">时间</span>
+                          <span style="width:80px;display:inline-block; text-align: center;">数量</span>
+                          </div>
+                          `;
+              params.forEach(item => {
+                 str1 += `     
+              <div style="padding:5px;">              
+              <span style="width:170px;display:inline-block;">
+                 ${item.marker}
+                 ${item.seriesName}</span>
+              <span style="width:80px;display:inline-block; text-align: center;">${item.name}</span>
+              <span style="width:80px;display:inline-block; text-align: center;">${item.value}</span>
+              </div>`
+              })
+
+             list.push(str1);
+             return'<div class="showBox">' + list + '</div>';
+          }
+
+        },

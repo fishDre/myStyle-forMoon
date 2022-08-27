@@ -1,0 +1,14 @@
+ graphic: {
+          type: 'text',     // 类型：文本
+          left: 'center',
+          top: 'middle',
+          silent: true,     // 不响应事件
+          invisible: seriesData.length > 0,   // 有数据就隐藏
+          style: {
+            fill: '#9d9d9d',
+            fontWeight: 'bold',
+            text: '暂无数据',
+            fontFamily: 'Microsoft YaHei',
+            fontSize: '16px'
+          }
+        },

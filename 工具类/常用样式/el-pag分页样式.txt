@@ -1,0 +1,30 @@
+  /deep/.pagination {
+        padding: 10px 0;
+        text-align: right;
+        margin-top: 10px;
+        .btn-prev,
+        .btn-next {
+          border: 1px solid #5b798f80;
+          border-radius: 4px;
+          margin: 0 2px;
+          color: #35516980;
+          padding: 0;
+        }
+        .el-input.is-active .el-input__inner,
+        .el-input__inner:focus {
+          border: 1px solid #5b798f80;
+        }
+        .el-pager {
+          .number {
+            border: 1px solid #5b798f80;
+            border-radius: 4px;
+            margin: 0 2px;
+            color: #35516980;
+            font-weight: normal;
+          }
+          .number.active {
+            border: 1px solid #3ac5aa;
+            color: #3ac5aa;
+          }
+        }
+      }

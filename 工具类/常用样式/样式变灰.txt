@@ -1,0 +1,4 @@
+element.style {
+    color: #c0c0c0;
+    filter: grayscale(100%);
+}

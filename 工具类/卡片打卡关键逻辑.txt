@@ -1,0 +1,26 @@
+pushKpiState(kpitem) {
+      if (kpitem.cardState) {
+        this.checkList.push(kpitem);
+      } else {
+        // 取消选择删除
+        this.checkList.forEach((item, index, arr) => {
+          if (kpitem['cardObj'].kpiId === item['cardObj'].kpiId) {
+            arr.splice(index, 1);
+            return;
+          }
+        });
+      }
+      if (this.checkList.length > 5) {
+        Toast({
+          message: '同时对比指标数不能超过5个',
+          className: 'toastByCity',
+        });
+        const item = kpitem;
+        item.cardState = false;
+        // 递归调用
+        this.pushKpiState(item);
+        this.fixOpenItem = kpitem;
+        return;
+      }
+      console.log('选择的KPI', this.comparedMap);
+    },

@@ -1,0 +1,13 @@
+// 把一个数组按照一定长度分割成若干数组
+function group(array, subGroupLength) {
+    let index = 0;
+    let newArray = [];
+    while(index < array.length) {
+        newArray.push(array.slice(index, index += subGroupLength));
+    }
+    return newArray;
+}
+
+let numberArray = [1,2,3,4,5,6,7,8,9,10,11,12];;
+let groupedArray = group(numberArray, 5);
+console.log(groupedArray);
