@@ -52,7 +52,7 @@ export const hideLoading = () => {
 
 // loading页面展示时右上角关闭按钮
 // 返回一个 扩展实例构造器, vue.extend官方文档 https://cn.vuejs.org/v2/api/#Vue-extend
-import ImageIcon from 'common/images/loadingClose.png';
+import ImageIcon from '@';
 const LoadingClose = Vue.extend({
   template: '<img class="loading-close" v-if="showClose" @click="closeLoading" :src="loadingIcon"/>'
 });

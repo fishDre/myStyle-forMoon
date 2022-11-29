@@ -1,0 +1,9 @@
+/**
+ * 本文件是项目样式构建主入口文件
+**/
+
+// 项目页面样式
+@import "pages/index";
+// 主题颜色
+@import "theme";
+@import "./modules/index";
