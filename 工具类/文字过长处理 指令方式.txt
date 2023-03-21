@@ -1,0 +1,41 @@
+const myToolTip = (el, binding, vnode) => {
+  if (!el) return;
+  setTimeout(function(){
+    function getStyle(element, property = null) {
+      const css = window.getComputedStyle(element, null)
+      return property ? css[property] : css
+    }
+    const target = el;
+  
+    const range = document.createRange()
+    range.setStart(target, 0)
+    range.setEnd(target, target.childNodes.length)
+  
+    // console.log(range)
+  
+    const rangeWidth = range.getBoundingClientRect().width
+    const padding =
+      (parseInt(getStyle(target, 'paddingLeft'), 10) || 0) +
+      (parseInt(getStyle(target, 'paddingRight'), 10) || 0)
+  
+    let data = {
+      rangeWidth,
+      padding,
+      'rangeWidth+padding': rangeWidth + padding,
+      offsetWidth: target.offsetWidth,
+      scrollWidth: target.scrollWidth,
+    }
+    console.log(JSON.stringify(data))
+    if (
+      rangeWidth + padding > target.offsetWidth ||
+      target.scrollWidth > target.offsetWidth
+    ) {
+      //console.log('有隐藏文字...')
+      target.nextElementSibling.style.display="inline-block";
+    } else {
+      //console.log('没有隐藏文字')
+      target.nextElementSibling.style.display="none";
+    }
+  },100)
+  
+};

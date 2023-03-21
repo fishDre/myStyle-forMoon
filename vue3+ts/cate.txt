@@ -1,0 +1,34 @@
+vue3-base-framework                      
+├─ public                              // 页面模板  
+│  ├─ favicon.ico                        
+│  └─ index.html                         
+├─ src                                 // 源码  
+│  ├─ assets                           // 静态文件   
+│  │  └─ logo.png                        
+│  ├─ components                       // 组件目录  
+│  │  └─ HelloWorld.vue                  
+│  ├─ demo                             // demo以及文档，随时查阅。生产环境不会被打包
+│  │  ├─ ...                                   
+│  ├─ hooks                            // 逻辑抽离的代码  
+│  │  └─ useXXX.ts                       
+│  ├─ router                           // 路由配置  
+│  │  └─ index.ts                        
+│  ├─ store                            // vuex配置  
+│  │  └─ index.ts                        
+│  ├─ unit                             // ts数据类型的定义    
+│  │  └─ types.ts                          
+│  ├─ views                            // 业务页面   
+│  │  ├─ yourPage                        
+│  │  │  └─ index.vue                    
+│  │  └─ Home.vue                        
+│  ├─ api.ts                           // axios配置       
+│  ├─ App.vue                          // 入口组件  
+│  ├─ main.ts                          // 入口程序 
+│  └─ shims-vue.d.ts                     
+├─ .env.*                              // 环境变量配置文件
+├─ babel.config.js                                                  
+├─ package.json                          
+├─ README.md                             
+├─ tsconfig.json                         
+├─ vue.config.js                       // vue相关配置，webpack相关配置  
+└─ yarn.lock                             
